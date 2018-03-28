@@ -1,5 +1,6 @@
 {
   "dependencies": {
-    "koa": "^2.5.0"
+    "koa": "^2.5.0",
+    "koa-mysql": "^1.0.3"
   }
 }
