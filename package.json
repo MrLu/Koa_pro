@@ -1,4 +1,16 @@
 {
+  "name":"koa_pro",
+  "version":"0.0.1",
+  "author": "mrlu",
+  "description": "koa 项目实战",
+  "main":"bin/www",
+  "keywords":["node.js","javascript","koa"],
+  "engines": {"node": "v7.3.0"},
+  "repository": {
+		"type": "git",
+		"url": "https://github.com/MrLu/Koa_pro"
+  },
+  "license":"MIT",
   "dependencies": {
     "koa": "^2.5.0",
     "koa-mysql": "^1.0.3"
