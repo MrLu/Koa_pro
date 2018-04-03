@@ -1,5 +1,20 @@
 #!/usr/bin/env node
 
-var app = require('../app');
-var config = require('../config/config');
+const app = require('../app');
+const config = require('../config/config');
+const sequelize = require('../config/sequelize')
 
+// app 服务启动监听
+app.listen(config.port, function(){
+    console.log('app started, listening on port:', config.port);
+});
+
+// 数据库连接测试
+sequelize
+.authenticate()
+.then( () => {
+    console.log('database Connection has been established successfully.')
+})
+.catch( err => {
+    console.error('Unable to connect to the database:', err)
+})
