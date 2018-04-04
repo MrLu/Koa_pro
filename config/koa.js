@@ -5,5 +5,8 @@ module.exports = function() {
     app.use(ctx => {
         ctx.body = 'Hello Koa';
     });
+
+    require('../app/routers/message.server.routers')(app);
+
     return app;
 }
