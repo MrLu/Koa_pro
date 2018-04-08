@@ -1,7 +1,10 @@
 const Sequelize = require('sequelize');
-const sequelize = require('../../../config/sequelize');
+const sequelize = require('../../config/sequelize');
 const Message = sequelize.define('message',{
-   id:Sequelize.BIGINT,
+   id:{
+       type:Sequelize.BIGINT,
+       primaryKey: true
+    },
    title:Sequelize.STRING,
    content:Sequelize.STRING,
    create_time:Sequelize.INTEGER,
@@ -12,4 +15,4 @@ const Message = sequelize.define('message',{
    extend3:Sequelize.STRING
 });
 
-module.exports = UserLocation;
+module.exports = Message;

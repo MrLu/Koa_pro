@@ -1,7 +1,10 @@
 const Sequelize = require('sequelize');
 const sequelize = require('../../../config/sequelize');
 const UserBase = sequelize.define('user_base',{
-   id:Sequelize.BIGINT,
+   id:{
+       type:Sequelize.BIGINT,
+       primaryKey: true
+   },
    user_role:Sequelize.TINYINT ,
    register_source:Sequelize.TINYINT,
    user_name:Sequelize.STRING,

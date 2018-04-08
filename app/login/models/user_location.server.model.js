@@ -1,7 +1,7 @@
 const Sequelize = require('sequelize');
 const sequelize = require('../../../config/sequelize');
 const UserLocation = sequelize.define('user_location',{
-   uid:Sequelize.BIGINT,
+   uid:{type:Sequelize.BIGINT,primaryKey: true},
    curr_nation:Sequelize.TINYINT ,
    curr_province:Sequelize.STRING,
    curr_city:Sequelize.STRING,

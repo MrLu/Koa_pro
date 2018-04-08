@@ -2,12 +2,20 @@
 
 const app = require('../app');
 const config = require('../config/config');
-const sequelize = require('../config/sequelize')
+const sequelize = require('../config/sequelize');
+
+if (config.isSSl) {
+    app.use(sslify({trustProtoHeader: true}));
+    console.log('use public https');
+} else {
+    console.log('use http');
+}
 
 // app 服务启动监听
 app.listen(config.port, function(){
     console.log('app started, listening on port:', config.port);
 });
+
 
 // 数据库连接测试
 sequelize
@@ -17,4 +25,4 @@ sequelize
 })
 .catch( err => {
     console.error('Unable to connect to the database:', err)
-})
+});

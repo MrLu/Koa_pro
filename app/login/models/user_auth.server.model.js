@@ -2,7 +2,8 @@ const Sequelize = require('sequelize');
 const sequelize = require('../../../config/sequelize');
 const UserAuth = sequelize.define('user_auth',{
    id: {
-       type:Sequelize.BIGINT
+       type:Sequelize.BIGINT,
+       primaryKey: true
    },
    uid:{
         type:Sequelize.BIGINT 
