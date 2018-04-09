@@ -5,24 +5,12 @@ const UserAuth = sequelize.define('user_auth',{
        type:Sequelize.BIGINT,
        primaryKey: true
    },
-   uid:{
-        type:Sequelize.BIGINT 
-   },
-   identity_type:{
-    type:Sequelize.TINYINT
-   },
-   identifier:{
-    type:Sequelize.STRING
-   },
-   certificate:{
-    type:Sequelize.STRING
-   },
-   create_time:{
-    type:Sequelize.INTEGER
-   },
-   update_time:{
-    type:Sequelize.INTEGER
-   }
+   uid:Sequelize.BIGINT ,
+   identity_type:Sequelize.TINYINT,
+   identifier:Sequelize.STRING,
+   certificate:Sequelize.STRING,
+   create_time:Sequelize.INTEGER,
+   update_time:Sequelize.INTEGER
 });
 
 module.exports = UserAuth;
